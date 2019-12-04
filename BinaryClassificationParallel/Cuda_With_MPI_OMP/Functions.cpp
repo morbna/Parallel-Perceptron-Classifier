@@ -54,9 +54,9 @@ int readFile(FILE **F, Classifier * C, Point ** P) {
 void freePoints(Point *P, int n) {
 
 	// vectors are sequentially allocated
-	P->vecInitloc;
-	P->vecV;
-	P->vecCurrentloc;
+	free(P->vecInitloc);
+	free(P->vecV);
+	free(P->vecCurrentloc);
 
 	free(P);
 }
